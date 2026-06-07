@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Task Manager</h1>
+
+    <section class="form">
+        <h2>Додати задачу</h2>
+
+        <input id="title" placeholder="Назва задачі">
+        <textarea id="description" placeholder="Опис"></textarea>
+
+        <select id="priority">
+            <option value="LOW">LOW</option>
+            <option value="MEDIUM" selected>MEDIUM</option>
+            <option value="HIGH">HIGH</option>
+        </select>
+
+        <button onclick="createTask()">Додати</button>
+    </section>
+
+    <section class="filters">
+        <h2>Фільтри</h2>
+
+        <select id="statusFilter">
+            <option value="">Всі статуси</option>
+            <option value="NEW">NEW</option>
+            <option value="IN_PROGRESS">IN_PROGRESS</option>
+            <option value="DONE">DONE</option>
+        </select>
+
+        <select id="priorityFilter">
+            <option value="">Всі пріоритети</option>
+            <option value="LOW">LOW</option>
+            <option value="MEDIUM">MEDIUM</option>
+            <option value="HIGH">HIGH</option>
+        </select>
+
+        <button onclick="loadTasks()">Застосувати</button>
+    </section>
+
+    <section>
+        <h2>Список задач</h2>
+        <div id="tasks"></div>
+    </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
